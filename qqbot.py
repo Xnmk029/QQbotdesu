@@ -1,5 +1,5 @@
 import json, os, urllib.request
-APPID=os.environ["QQ_APPID"]; SECRET=os.environ["QQ_SECRET"]
+APPID=os.environ.get("QQ_APPID",""); SECRET=os.environ.get("QQ_SECRET","")
 API="https://api.sgroup.qq.com"
 def _post(url, body, headers=None):
     r=urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
